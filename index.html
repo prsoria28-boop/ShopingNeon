@@ -10,10 +10,9 @@
 </head>
 <body>
 
-<!-- Fondo animado claro -->
+<!-- Fondo con imagen -->
 <div class="background"></div>
 
-<!-- Contenedor principal -->
 <main class="container">
 
   <!-- Header -->
@@ -34,22 +33,27 @@
   <!-- Servicios -->
   <section class="services">
     <div class="service neon-card">
+      <img src="aseo.png" alt="Aseo Personal">
       <p>🧼 Aseo Personal<br><span>Personal Care</span></p>
     </div>
 
     <div class="service neon-card">
-      <p>🥪 Tortas, Sándwiches<br>🥣 Sopas Maruchan<br><span>Sandwiches & Instant Soups</span></p>
+      <img src="tortas.png" alt="Tortas y Sandwiches">
+      <p>🥪 Tortas, Sándwiches<br>🥣 Sopas Maruchan<br><span>Fast Food</span></p>
     </div>
 
     <div class="service neon-card">
+      <img src="cafe.png" alt="Café y Licuados">
       <p>☕ Café<br>🥤 Licuados<br><span>Coffee & Smoothies</span></p>
     </div>
 
     <div class="service neon-card">
+      <img src="recarga.png" alt="Recargas">
       <p>📲 Recargas<br><span>Top-ups</span></p>
     </div>
 
     <div class="service neon-card">
+      <img src="internet.png" alt="Internet WiFi">
       <p>🌐 Internet<br><span>WiFi</span></p>
     </div>
   </section>
@@ -79,7 +83,7 @@
 
 </main>
 
-<!-- Modal de aviso -->
+<!-- Modal -->
 <div class="modal" id="trialModal">
   <div class="modal-content">
     <h3>⏳ Tiempo gratuito por terminar</h3>
@@ -90,19 +94,10 @@
 
 <!-- Script -->
 <script>
-const trialWarningTime = 240000; // 4 minutos
+const trialWarningTime = 240000;
 const modal = document.getElementById("trialModal");
 function closeModal(){ modal.style.display="none"; }
 setTimeout(()=>{ modal.style.display="flex"; }, trialWarningTime);
-
-// Animación al hacer scroll
-const revealElements = document.querySelectorAll('.description, .services, .pricing, .hours');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry=>{
-    if(entry.isIntersecting) entry.target.classList.add('visible');
-  });
-}, {threshold:0.2});
-revealElements.forEach(el => observer.observe(el));
 </script>
 
 </body>
