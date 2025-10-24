@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- Fondo -->
+<!-- Fondo animado -->
 <div class="background"></div>
 
 <!-- Logo flotante -->
@@ -21,56 +21,42 @@
 
   <!-- Header -->
   <header class="header">
-    <h1>WiFi Shop</h1>
+    <h1 class="neon-text">WiFi Shop</h1>
     <p class="tagline">Tu refugio urbano en la terminal · <span>Your urban refuge in the terminal</span></p>
   </header>
 
   <!-- Descripción -->
   <section class="description">
-    <p><strong>ES:</strong> En nuestra tienda puedes encontrar de todo: aseo personal, tortas, café, licuados, recargas, ¡y por supuesto, internet WiFi! Todo al alcance de tus manos.</p>
-    <p><strong>EN:</strong> In our store you’ll find everything: personal care, sandwiches, coffee, smoothies, mobile top-ups, and of course, WiFi internet! All at your fingertips.</p>
+    <p><strong>ES:</strong> En nuestra tienda puedes encontrar de todo: aseo personal, tortas, café, licuados, recargas, ¡y por supuesto, internet WiFi!</p>
+    <p><strong>EN:</strong> In our store you’ll find everything: personal care, sandwiches, coffee, smoothies, mobile top-ups, and of course, WiFi internet!</p>
   </section>
 
   <!-- Servicios -->
   <section class="services">
     <div class="service neon-card">
-      <img src="aseo.png" alt="">
       <p>🧼 Aseo Personal<br><span>Personal Care</span></p>
     </div>
 
     <div class="service neon-card">
-      <img src="tortas.png" alt="">
-      <p>🥪 Tortas<br><span>Sandwiches</span></p>
-      <ul>
-        <li>🌮 Sincronizadas</li>
-        <li>🍜 Sopas Maruchan</li>
-      </ul>
+      <p>🥪 Tortas, Sándwiches<br>🥣 Sopas Maruchan<br><span>Sandwiches & Instant Soups</span></p>
     </div>
 
     <div class="service neon-card">
-      <img src="cafe.png" alt="">
-      <p>☕ Café<br><span>Coffee</span></p>
+      <p>☕ Café<br>🥤 Licuados<br><span>Coffee & Smoothies</span></p>
     </div>
 
     <div class="service neon-card">
-      <img src="licuado.png" alt="">
-      <p>🥤 Licuados<br><span>Smoothies</span></p>
-    </div>
-
-    <div class="service neon-card">
-      <img src="recarga.png" alt="">
       <p>📲 Recargas<br><span>Top-ups</span></p>
     </div>
 
     <div class="service neon-card">
-      <img src="internet.png" alt="">
       <p>🌐 Internet<br><span>WiFi</span></p>
     </div>
   </section>
 
   <!-- Tarifas -->
-  <section class="pricing neon-card">
-    <h2>💻 Tarifas de Internet</h2>
+  <section class="pricing neon-box">
+    <h2 class="neon-title">💻 Tarifas de Internet</h2>
     <ul>
       <li>30 minutos / 30 minutes — <strong>$5.00</strong></li>
       <li>1 hora / 1 hour — <strong>$10.00</strong></li>
@@ -81,7 +67,7 @@
   </section>
 
   <!-- Horario -->
-  <section class="hours neon-card">
+  <section class="hours">
     <h2>🕘 Horario</h2>
     <p>9:00 AM – 6:00 PM</p>
   </section>
@@ -95,7 +81,7 @@
 
 <!-- Modal de aviso -->
 <div class="modal" id="trialModal">
-  <div class="modal-content neon-card">
+  <div class="modal-content">
     <h3>⏳ Tiempo gratuito por terminar</h3>
     <p>Visítanos en <strong>WiFi Shop</strong> para adquirir acceso completo.<br>Your free time is almost up — visit WiFi Shop to purchase full access.</p>
     <button class="modal-button" onclick="closeModal()">Entendido / OK</button>
@@ -109,7 +95,7 @@ const modal = document.getElementById("trialModal");
 function closeModal(){ modal.style.display="none"; }
 setTimeout(()=>{ modal.style.display="flex"; }, trialWarningTime);
 
-// Animación progresiva
+// Animación al hacer scroll
 const revealElements = document.querySelectorAll('.description, .services, .pricing, .hours');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry=>{
