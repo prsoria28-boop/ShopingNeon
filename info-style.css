@@ -146,3 +146,34 @@ footer {
 .modal-button:hover {
   background: #00eaff;
 }
+/* ======= ESTILOS DE TEXTO (TÍTULO, TAGLINE Y DESCRIPCIÓN) ======= */
+
+/* Eslogan justo debajo del título */
+.tagline {
+  color: #2c3e50; /* tono oscuro legible sobre fondo claro */
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
+
+.tagline span {
+  color: #0077b6; /* color diferente para el texto en inglés */
+}
+
+/* Descripción en español e inglés */
+.description p {
+  color: #1a1a1a; /* texto oscuro para fondo claro */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: justify;
+  max-width: 850px;
+  margin: 0.8rem auto;
+  background: rgba(255, 255, 255, 0.6); /* fondo translúcido */
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* sutil sombra para resaltar el texto */
+  backdrop-filter: blur(4px); /* difuminado moderno */
+}
